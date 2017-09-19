@@ -1,3 +1,5 @@
+<?php require("allproducts.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

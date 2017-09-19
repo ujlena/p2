@@ -1,0 +1,66 @@
+{
+	"cleansers" : [
+		{
+			"brand" : "Belif",
+			"name" : "Gentle Cleansing Emulsion",
+			"url" : "http://global.belifcosmetic.com/product/detail.jsp?pid=B5000005&cid1=A&cid2=A",
+			"price" : "$28",
+			"skintype" : "dry"
+		},
+		{
+			"brand" : "Lancome",
+			"name" : "Gel Radiance",
+			"url" : "http://www.lancome-usa.com/Gel-Radiance/1000186,default,pd.html?cgid=skincare-cleanse#start=6",
+			"price" : "$26",
+            "skintype" : "dry"
+		}
+	],
+	"toners" : [
+		{
+			"brand" : "Fresh",
+            "name" : "Rose Floral Toner",
+            "url" : "http://www.fresh.com/US/toner-%26-infusion/rose-floral-toner/H00000496.html",
+            "price" : "$40",
+            "skintype" : "dry normal oily"
+		},
+		{
+            "brand" : "Kiehl's",
+            "name" : "Calendula Herbal Extract Toner",
+            "url" : "http://www.kiehls.com/calendula-herbal-extract-alcohol-free-toner/254.html?cgid=face-toners&dwvar_254_size=4.2%20fl.%20oz.%20Bottle#start=1&cgid=face-toners",
+            "price" : "$21",
+            "skintype" : "oily"
+        }
+	],
+	"moisturizers" : [
+		{
+            "brand" : "Kiehl's",
+            "name" : "Ultra Facial Cream",
+            "url" : "http://www.kiehls.com/ultra-facial-cream/622.html?cgid=face-moisturizers&dwvar_622_size=4.2%20fl.%20oz.%20Jar#start=4&cgid=face-moisturizers",
+            "price" : "$27.50",
+            "skintype" : "dry normal"
+        },
+        {
+            "brand" : "Belif",
+            "name" : "Misturizing Bomb",
+            "url" : "http://global.belifcosmetic.com/product/detail.jsp?pid=B5000025&cid1=A&cid2=E",
+            "price" : "$38",
+            "skintype" : "dry" 
+    	}
+	],
+	"eyecreams" : [
+		{
+            "brand" : "Origins",
+            "name" : "Refreshing Eye Cream",
+            "url" : "http://www.origins.com/product/15348/11641/skincare/treat/eye-care/GinZing/Refreshing-Eye-Cream-to-Brighten-and-Depuff",
+            "price" : "$30",
+            "skintype" : "normal sensitive"
+        },
+        {
+            "brand" : "Kiehl's",
+            "name" : "Creamy Eye Treatment",
+            "url" : "http://www.kiehls.com/creamy-eye-treatment-with-avocado/258.html?cgid=face-eye&dwvar_258_size=0.95%20fl.%20oz.%20Jar#start=4&cgid=face-eye",
+            "price" : "$48",
+            "skintype" : "dry sensitive normal"
+        }
+	]
+}
