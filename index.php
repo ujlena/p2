@@ -93,7 +93,13 @@
 						<h3>Where to buy: <a href="<?=$products[$index]['url']?>">link to official website</a>
 						</h3>
 						<h3>Price: <?=$products[$index]["price"]?></h3>
-						<h3>Skin Type: <?=$products[$index]["skintype"]?></h3>
+
+
+						<h3>Skin Type:
+						<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
+							<?=$val?>
+						<?php endforeach; ?>
+						</h3>
 					</div>
 
 			<?php endforeach; ?>
