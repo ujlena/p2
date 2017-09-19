@@ -1,0 +1,20 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #fff;
+	border: 5px solid #555;
+	padding: 5em 10em;
+	width: 70%;
+	margin: 2em;
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
