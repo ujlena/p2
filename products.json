@@ -53,14 +53,14 @@
             "name" : "Refreshing Eye Cream",
             "url" : "http://www.origins.com/product/15348/11641/skincare/treat/eye-care/GinZing/Refreshing-Eye-Cream-to-Brighten-and-Depuff",
             "price" : "$30",
-            "skintype" : "normal sensitive"
+            "skintype" : "normal combination"
         },
         {
             "brand" : "Kiehl's",
             "name" : "Creamy Eye Treatment",
             "url" : "http://www.kiehls.com/creamy-eye-treatment-with-avocado/258.html?cgid=face-eye&dwvar_258_size=0.95%20fl.%20oz.%20Jar#start=4&cgid=face-eye",
             "price" : "$48",
-            "skintype" : "dry sensitive normal"
+            "skintype" : "dry combination normal"
         }
 	]
 }

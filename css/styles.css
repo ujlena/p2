@@ -8,13 +8,43 @@ html {
 
 body {
 	background-color: #fff;
-	border: 5px solid #555;
-	padding: 5em 10em;
+	
 	width: 70%;
 	margin: 2em;
 }
 
+form {
+	border: 5px solid #555;
+	padding: 5em 10em;
+}
+
 h1 {
 	margin-bottom: 1em;
+}
+
+.product h2 {
+	color: #fff;
+	padding-left: 1em;
+}
+.product {
+	border: 1px solid blue;
+	margin: 2em;
+	background-color: #555;
+}
+.item {
+	border: 1px solid red;
+	margin: .5em;
+	background-color: #fff;
+	padding-left: .5em;
+}
+
+.item a {
+	color: #333;
+	text-decoration: underline;
+}
+
+.item a:hover {
+	color: #555;
+	text-decoration: none;
 }
 
