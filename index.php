@@ -66,7 +66,6 @@
 				<?php if ($producttypes == $ptype) : ?>
 
 					<h2>Product Type: <?=$ptype?></h2>
-								
 					<div class="item">
 						
 						<?php $matchresult = false; ?>
@@ -79,13 +78,9 @@
 								<?php $matchresult = true; ?>
 
 								<h3>Brand: <?=$products[$index]["brand"] ?></h3>
-								
 								<h3>Name: <?=$products[$index]["name"] ?></h3>
-
 								<h3>Where to buy: <a href="<?=$products[$index]["url"] ?>">website</a></h3>
-
 								<h3>Price: $<?=$products[$index]["price"] ?></h3>
-
 								<h3>Skin Type: 
 									<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
 										<?=$val?>
@@ -93,16 +88,12 @@
 								</h3>
 								
 							<?php endif; ?>
-
-							
 							<br>
 						<?php endforeach; ?>
 
 						<?php if (!$matchresult) : ?>
 							<p>Sorry we can't find you one yet.</p>
 						<?php endif; ?>	
-
-
 
 					</div>
 
