@@ -1,5 +1,4 @@
 <?php require("allproducts.php"); ?>
-<?php require("helpers.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,10 +66,17 @@
 			<h3>hello: <?=$ptype?></h3>
 
 			<?php foreach ($products as $index => $item) : ?>
-				<?php if ($skintype == $products[$index]["skintype"]) : ?>
 
-					<h3>you got it: <?=$products[$index]["skintype"]?></h3>
 
+				<?php if ( (in_array($skintype, $products[$index]["skintype"]))   
+							&& ($pricerange >= $products[$index]["price"]) ): ?>
+
+					<h3>you got it: 
+					<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
+							<?=$val?>
+					<?php endforeach; ?>
+					<?=$products[$index]["price"] ?>
+					</h3>
 				<?php endif; ?>
 
 			<?php endforeach; ?>
@@ -93,7 +99,6 @@
 						<h3>Where to buy: <a href="<?=$products[$index]['url']?>">link to official website</a>
 						</h3>
 						<h3>Price: <?=$products[$index]["price"]?></h3>
-
 
 						<h3>Skin Type:
 						<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>

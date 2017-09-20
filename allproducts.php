@@ -1,5 +1,7 @@
 <?php
 
+require("helpers.php");
+
 $productsJson = file_get_contents("products.json");
 
 #var_dump($productsJson); 
@@ -31,8 +33,8 @@ if (isset($_GET["skintype"])) {
 }
 
 if (isset($_GET["pricerange"])) {
-	$pricerange = $_GET["pricerange"];
-	echo "Price you chose: " .$pricerange;
+	$pricerange = sanitize($_GET["pricerange"]);
+	echo "Price you chose: " . $pricerange;
 }
 
 
@@ -57,13 +59,6 @@ if ($skintype == "dry") {
 } else if ($skintype == "normal") {
 	$normal = "SELECTED";
 }
-
-/*
-if (($pricerange > 10) && ($pricerance < 25)) {
-	echo "10~25";
-} else if ($pricerange >= 25) && ($pricerance < 50) {
-	echo "25~50";
-}*/
 
 
 
