@@ -53,16 +53,16 @@ if ($producttypes == "eyecreams") {
 
 
 if ($skintype == "dry") {
-	$dry = "SELECTED";
+	$dry = "checked";
 } 
 if ($skintype == "oily") {
-	$oily = "SELECTED";
+	$oily = "checked";
 } 
 if ($skintype == "combination") {
-	$combination = "SELECTED";
+	$combination = "checked";
 } 
 if ($skintype == "normal") {
-	$normal = "SELECTED";
+	$normal = "checked";
 }
 
 
