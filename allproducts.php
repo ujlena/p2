@@ -10,41 +10,40 @@ $productsArr = json_decode($productsJson, true);
 
 #var_dump($productsArr);
 
-
-#$producttypes = $_GET["producttypes"];
-#echo "You want to search for: " .$producttypesvalue;
-
-#$skintypevalue = $_GET["skintype"];
-#echo "Skin Type Selected: " .$skintypevalue;
-
-#$pricerange = $_GET["pricerange"];
-#echo "Price you chose: " .$pricerange;
-
+# variable initialization
+$cleansers = "";
+$toners = "";
+$moisturizers = "";
+$eyecreams = "";
+$dry = "";
+$oily = "";
+$combination = "";
+$normal = "";
 
 
 if (isset($_GET["producttypes"])) {
 	$producttypes = $_GET["producttypes"];
-	echo "You want to search for: " .$producttypes;
 }
 
 if (isset($_GET["skintype"])) {
 	$skintype = $_GET["skintype"];
-	echo "Skin Type Selected: " .$skintype;
 }
 
 if (isset($_GET["pricerange"])) {
 	$pricerange = sanitize($_GET["pricerange"]);
-	echo "Price you chose: " . $pricerange;
 }
 
 
 if ($producttypes == "cleansers") {
 	$cleansers = "SELECTED";
-} else if ($producttypes == "toners") {
+} 
+if ($producttypes == "toners") {
 	$toners = "SELECTED";
-} else if ($producttypes == "moisturizers") {
+} 
+if ($producttypes == "moisturizers") {
 	$moisturizers == "SELECTED";
-} else if ($producttypes = "eyecreams") {
+} 
+if ($producttypes == "eyecreams") {
 	$eyecreams = "SELECTED";
 }
 
@@ -52,11 +51,14 @@ if ($producttypes == "cleansers") {
 
 if ($skintype == "dry") {
 	$dry = "SELECTED";
-} else if ($skintype == "oily") {
+} 
+if ($skintype == "oily") {
 	$oily = "SELECTED";
-} else if ($skintype == "combination") {
+} 
+if ($skintype == "combination") {
 	$combination = "SELECTED";
-} else if ($skintype == "normal") {
+} 
+if ($skintype == "normal") {
 	$normal = "SELECTED";
 }
 
