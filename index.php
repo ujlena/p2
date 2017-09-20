@@ -59,40 +59,44 @@
 		</p>
 	</form>
 
+	<div id="result">
+		<h3>Product matches you .. </h3>
+		<div class="product">
+			<?php foreach ($productsArr as $ptype => $products) : ?>
+				<?php if ($producttypes == $ptype) : ?>
 
-	<h3>Product matches you .. </h3>
-	<?php foreach ($productsArr as $ptype => $products) : ?>
-		<?php if ($producttypes == $ptype) : ?>
+					<h2>Product Type: <?=$ptype?></h2>
 
-			<h2>Product Type: <?=$ptype?></h2>
+					<div class="item">
+						<?php foreach ($products as $index => $item) : ?>
 
-			<?php foreach ($products as $index => $item) : ?>
+							<?php if ( (in_array($skintype, $products[$index]["skintype"]))  
+										&& ($pricerange >= $products[$index]["price"]) ): ?>
+								
 
-				<?php if ( (in_array($skintype, $products[$index]["skintype"]))   
-							&& ($pricerange >= $products[$index]["price"]) ): ?>
-					
+								<h3>Brand: <?=$products[$index]["brand"] ?></h3>
+								
+								<h3>Name: <?=$products[$index]["name"] ?></h3>
 
-					<h3>Brand: <?=$products[$index]["brand"] ?></h3>
-					
-					<h3>Name: <?=$products[$index]["name"] ?></h3>
+								<h3>Where to buy: <a href="<?=$products[$index]["url"] ?>">Link to official website</a></h3>
 
-					<h3>Where to buy: <a href="<?=$products[$index]["url"] ?>">Link to official website</a></h3>
+								<h3>Price: $<?=$products[$index]["price"] ?></h3>
 
-					<h3>Price: $<?=$products[$index]["price"] ?></h3>
-
-					<h3>Skin Type: 
-						<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
-							<?=$val?>
+								<h3>Skin Type: 
+									<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
+										<?=$val?>
+									<?php endforeach; ?>
+								</h3>
+								
+							<?php endif; ?>
+							<br>
 						<?php endforeach; ?>
-					</h3>
-					
+					</div>
 				<?php endif; ?>
-
 			<?php endforeach; ?>
-			
-		<?php endif; ?>
-	<?php endforeach; ?>
+		</div>
 
+	</div>
 	<footer>
 
 

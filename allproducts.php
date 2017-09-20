@@ -11,6 +11,9 @@ $productsArr = json_decode($productsJson, true);
 #var_dump($productsArr);
 
 # variable initialization
+$producttypes = "";
+$skintype = "";
+$pricerange = "";
 $cleansers = "";
 $toners = "";
 $moisturizers = "";
