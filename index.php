@@ -59,49 +59,35 @@
 		</p>
 	</form>
 
+
 	<div id="result">
-		<h3>Product matches you .. </h3>
+		<h2>Product matches you .. </h2>
 		<div class="product">
-			<?php foreach ($productsArr as $ptype => $products) : ?>
-				<?php if ($producttypes == $ptype) : ?>
+			
+			<h2>Product Type: <?=$ptyperesult?></h2>
 
-					<h2>Product Type: <?=$ptype?></h2>
-					<div class="item">
-						
-						<?php $matchresult = false; ?>
+			<div class="item">
 
-						<?php foreach ($products as $index => $item) : ?>
-
-							<?php if ( (in_array($skintype, $products[$index]["skintype"]))  
-										&& ($pricerange >= $products[$index]["price"]) ) : ?>
-								
-								<?php $matchresult = true; ?>
-
-								<h3>Brand: <?=$products[$index]["brand"] ?></h3>
-								<h3>Name: <?=$products[$index]["name"] ?></h3>
-								<h3>Where to buy: <a href="<?=$products[$index]["url"] ?>">website</a></h3>
-								<h3>Price: $<?=$products[$index]["price"] ?></h3>
-								<h3>Skin Type: 
-									<?php foreach ($products[$index]["skintype"] as $idx => $val) : ?>
-										<?=$val?>
-									<?php endforeach; ?>
-								</h3>
-								
-							<?php endif; ?>
-							<br>
+			<?php foreach ($matchingresultArr as $index => $productVal) : ?>
+					
+					<h3>Brand : <?=$matchingresultArr[$index][0]["brand"]?></h3>
+					<h3>Product : <?=$matchingresultArr[$index][0]["name"]?></h3>
+					<h3>Where to buy : <a href="<?=$matchingresultArr[$index][0]["url"]?>">website</a></h3>
+					<h3>Price : <?=$matchingresultArr[$index][0]["price"]?></h3>
+					<h3>SkinType : 
+						<?php foreach ($matchingresultArr[$index][0]["skintype"] as $idx => $val) : ?>
+							<?=$val?>
 						<?php endforeach; ?>
-
-						<?php if (!$matchresult) : ?>
-							<p>Sorry we can't find you one yet.</p>
-						<?php endif; ?>	
-
-					</div>
-
-				<?php endif; ?>
+					</h3>
 			<?php endforeach; ?>
-		</div>
 
+			<?php if (!$isMatch) : ?>
+				<p>Sorry we can't find you one yet.</p>
+			<?php endif; ?>
+		</div>
 	</div>
+
+	
 
 </body>
 </html>

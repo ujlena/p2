@@ -51,7 +51,6 @@ if ($producttypes == "eyecreams") {
 }
 
 
-
 if ($skintype == "dry") {
 	$dry = "checked";
 } 
@@ -65,10 +64,25 @@ if ($skintype == "normal") {
 	$normal = "checked";
 }
 
+$isMatch = false;
+$matchingresultArr = [];
 
+foreach ($productsArr as $ptype => $products) {
+	if ($producttypes == $ptype) {
+		
+		$ptyperesult = $ptype;
 
+		foreach ($products as $index => $item) {
+			if ( (in_array($skintype, $products[$index]["skintype"]))
+				&& ($pricerange >= $products[$index]["price"]) ) {
 
+				$isMatch = true;
+				$matchingresultArr[$index] = [$item];
 
+			}
+		}
+	}
+}
 
 
 
