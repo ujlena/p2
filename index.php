@@ -68,26 +68,26 @@
 
 			<div class="item">
 
-			<?php foreach ($matchingresultArr as $index => $productVal) : ?>
+				<?php foreach ($matchingresultArr as $index => $productVal) : ?>
 					
 					<h3>Brand : <?=$matchingresultArr[$index][0]["brand"]?></h3>
 					<h3>Product : <?=$matchingresultArr[$index][0]["name"]?></h3>
 					<h3>Where to buy : <a href="<?=$matchingresultArr[$index][0]["url"]?>">website</a></h3>
-					<h3>Price : <?=$matchingresultArr[$index][0]["price"]?></h3>
-					<h3>SkinType : 
+					<h3>Price : $<?=$matchingresultArr[$index][0]["price"]?></h3>
+					<h3 id="lastchild">SkinType : 
 						<?php foreach ($matchingresultArr[$index][0]["skintype"] as $idx => $val) : ?>
 							<?=$val?>
 						<?php endforeach; ?>
 					</h3>
-			<?php endforeach; ?>
+				<?php endforeach; ?>
 
-			<?php if (!$isMatch) : ?>
-				<p>Sorry we can't find you one yet.</p>
-			<?php endif; ?>
+				<?php if (!$isMatch) : ?>
+					<p>Sorry we can't find you one yet.</p>
+				<?php endif; ?>
+			</div>
 		</div>
-	</div>
 
-	
+	</div>
 
 </body>
 </html>

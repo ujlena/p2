@@ -26,16 +26,22 @@ h1 {
 	color: #fff;
 	padding: 1em;
 }
+
 .product {
 	margin: 2em;
 	background-color: #555;
 	border: 1px solid #555;
 }
-.item {
+
+div.item {
 	padding: 2em 2em 2em 5em;
 	margin: .5em;
 	background-color: #fff;
+	
+}
 
+#lastchild {
+	margin-bottom: 3em;
 }
 
 .item a {

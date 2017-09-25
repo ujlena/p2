@@ -22,6 +22,7 @@ $dry = "";
 $oily = "";
 $combination = "";
 $normal = "";
+$ptyperesult = "";
 
 
 if (isset($_GET["producttypes"])) {
