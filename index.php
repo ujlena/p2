@@ -49,7 +49,7 @@
 		<!--input type: number-->
 		<p>
 			<label for="pricerange">
-				<span>*Price Range (10~100) $<span>
+				<span>*Price Range (10~100) $</span>
 			</label>
 			<input type="number" name="pricerange" min="10" max="100" value="<?=sanitize($pricerange)?>">
 		</p>
