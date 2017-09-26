@@ -27,14 +27,20 @@ $ptyperesult = "";
 
 if (isset($_GET["producttypes"])) {
 	$producttypes = $_GET["producttypes"];
+} else {
+	$producttypes = "";
 }
 
 if (isset($_GET["skintype"])) {
 	$skintype = $_GET["skintype"];
+} else {
+	$skintype = "";
 }
 
 if (isset($_GET["pricerange"])) {
 	$pricerange = sanitize($_GET["pricerange"]);
+} else {
+	$pricerange = "";
 }
 
 
