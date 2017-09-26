@@ -1,14 +1,16 @@
 <?php
 
 require("helpers.php");
+require("Skincare.php");
 
+use Findskincare\Skincare;
+
+/*
 $productsJson = file_get_contents("products.json");
-
-#var_dump($productsJson); 
-
 $productsArr = json_decode($productsJson, true);
+*/
+$skincare = new Skincare("products.json"); //instantiate new object
 
-#var_dump($productsArr);
 
 # variable initialization
 $producttypes = "";
@@ -71,25 +73,10 @@ if ($skintype == "normal") {
 	$normal = "checked";
 }
 
-$isMatch = false;
-$matchingresultArr = [];
 
-foreach ($productsArr as $ptype => $products) {
-	if ($producttypes == $ptype) {
-		
-		$ptyperesult = $ptype;
+$matchingresultArr = $skincare->getUserMatchProducts($producttypes, $skintype, $pricerange);
 
-		foreach ($products as $index => $item) {
-			if ( (in_array($skintype, $products[$index]["skintype"]))
-				&& ($pricerange >= $products[$index]["price"]) ) {
-
-				$isMatch = true;
-				$matchingresultArr[$index] = [$item];
-
-			}
-		}
-	}
-}
+$isMatch = $skincare->isAllMatch();
 
 
 
