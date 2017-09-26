@@ -14,7 +14,7 @@
 	<form method="GET" action="/">
 
 		<p><!--input type: select-->
-			<label for "producttypes">
+			<label for="producttypes">
 				<span>Choose category</span>
 			</label>
 			<select name="producttypes">
