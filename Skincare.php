@@ -35,11 +35,10 @@ class Skincare
 
 				foreach ($products as $index => $item) {
 					if ( (in_array($skintype, $products[$index]["skintype"]))
-						&& ($pricerange >= $products[$index]["price"]) ) {
+						&& ( $pricerange >= $products[$index]["price"]) ) {
 
 						$this->isMatch = true;
 						$matchingresultArr[$index] = [$item];
-
 					}
 				}
 			}

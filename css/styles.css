@@ -55,6 +55,17 @@ div.item {
 }
 
 div#result {
-	
 	margin: 3em;
+}
+
+
+#reqmsg {
+	color: red;
+}
+
+#errormsg {
+	padding: .5em;
+	font-size: .8em;
+	margin-bottom: 2em;
+	color: red;
 }

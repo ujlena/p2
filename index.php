@@ -26,7 +26,7 @@
 		</p>
 
 		
-		<span>Select your skin type</span>
+		<span>*Select your skin type</span>
 		<!--input type: radio-->
 		<p>
 			<input type="radio" id="dry" name="skintype" value="dry" <?=$dry?> >
@@ -49,7 +49,7 @@
 		<!--input type: number-->
 		<p>
 			<label for="pricerange">
-				<span>Price Range (10~100) $<span>
+				<span>*Price Range (10~100) $<span>
 			</label>
 			<input type="number" name="pricerange" min="10" max="100" value="<?=sanitize($pricerange)?>">
 		</p>
@@ -57,6 +57,18 @@
 		<p>
 			<input type="submit" class="btn" value="Find one for me">
 		</p>
+
+		<!--error message for validation-->
+		<span id=reqmsg>* is required</span>
+		
+			<?php if (isset($errors)) : ?>
+				<p id=errorfield>
+				<?php foreach ($errors as $error) : ?>
+					<span id="errormsg"><?=$error?></span><br>
+				<?php endforeach; ?>
+				</p>
+			<?php endif; ?>
+
 	</form>
 
 

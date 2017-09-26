@@ -2,14 +2,14 @@
 
 require("helpers.php");
 require("Skincare.php");
+require("Form.php");
 
 use Findskincare\Skincare;
+use DWA\Form;
 
-/*
-$productsJson = file_get_contents("products.json");
-$productsArr = json_decode($productsJson, true);
-*/
+
 $skincare = new Skincare("products.json"); //instantiate new object
+$form = new Form($_GET); //pass Get or POST
 
 
 # variable initialization
@@ -27,23 +27,9 @@ $normal = "";
 $ptyperesult = "";
 
 
-if (isset($_GET["producttypes"])) {
-	$producttypes = $_GET["producttypes"];
-} else {
-	$producttypes = "";
-}
-
-if (isset($_GET["skintype"])) {
-	$skintype = $_GET["skintype"];
-} else {
-	$skintype = "";
-}
-
-if (isset($_GET["pricerange"])) {
-	$pricerange = sanitize($_GET["pricerange"]);
-} else {
-	$pricerange = "";
-}
+$producttypes = $form->get("producttypes", "");
+$skintype = $form->get("skintype", "");
+$pricerange = $form->get("pricerange", "");
 
 
 if ($producttypes == "cleansers") {
@@ -73,6 +59,13 @@ if ($skintype == "normal") {
 	$normal = "checked";
 }
 
+# Validate
+if ($form->isSubmitted()) {
+	$errors = $form->validate([
+		"skintype" => "required",
+		"pricerange" => "numeric|min:10|max:100"
+	]);
+}
 
 $matchingresultArr = $skincare->getUserMatchProducts($producttypes, $skintype, $pricerange);
 
