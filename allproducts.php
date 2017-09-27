@@ -71,6 +71,8 @@ $matchingresultArr = $skincare->getUserMatchProducts($producttypes, $skintype, $
 
 $isMatch = $skincare->isAllMatch();
 
+$ptyperesult = $skincare->pTypeResult();
+
 
 
 

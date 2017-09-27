@@ -6,6 +6,7 @@ class Skincare
 {
 	private $productsArr;
 	private $isMatch;
+	private $ptyperesult;
 
 	public function __construct($jsonPath) 
 	{
@@ -23,15 +24,21 @@ class Skincare
 		return $this->isMatch;
 	}
 
+	public function pTypeResult() {
+		return $this->ptyperesult;
+	}
+
 	public function getUserMatchProducts($producttypes, $skintype, $pricerange)
 	{
 		$this->isMatch = false;
 		$matchingresultArr = [];
 
+
 		foreach ($this->productsArr as $ptype => $products) {
 			if ($producttypes == $ptype) {
-		
-				$ptyperesult = $ptype;
+				
+				$this->ptyperesult = $ptype;
+				
 
 				foreach ($products as $index => $item) {
 					if ( (in_array($skintype, $products[$index]["skintype"]))
