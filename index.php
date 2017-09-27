@@ -14,7 +14,7 @@
 	<form method="GET" action="/">
 
 		<p><!--input type: select-->
-			<label for="producttypes">Choose category</label>
+			<span>Choose category</span>
 			<select name="producttypes">
 				<option value="cleansers" <?=$cleansers?> >Cleansers</option>
 				<option value="toners" <?=$toners?> >Toners</option>
@@ -46,7 +46,7 @@
 
 		<!--input type: number-->
 		<p>
-			<label for="pricerange">*Price Range (10~100) $</label>
+			<span>*Price Range (10~100) $</span>
 			<input type="number" name="pricerange" min="10" max="100" value="<?=sanitize($pricerange)?>">
 		</p>
 
